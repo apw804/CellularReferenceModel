@@ -27,6 +27,17 @@ This project is a collaboration between:
 - **[Kishan Sthankiya](https://orcid.org/0009-0002-1935-0476)** - Queen Mary University of London
 - **[Keith Briggs](https://keithbriggs.info/)** - BT
 
+## Academic Integrity Declaration
+
+The concepts, algorithms, and source code implementation in this project are the original intellectual contributions of the authors listed above. However, in the interest of full transparency and academic integrity, we declare that:
+
+- **Documentation**: This README file has been rewritten and formatted with assistance from an AI language model (GitHub Copilot/Claude) to improve clarity, structure, and presentation.
+- **Code Documentation**: Docstrings throughout the source code have been enhanced and standardized with AI assistance to improve readability and completeness.
+- **Content Verification**: All AI-generated documentation has been thoroughly reviewed and verified for technical accuracy by the authors.
+- **Original Work**: The underlying research contributions, methodologies, algorithmic implementations, and technical work remain the work of the human authors.
+
+This approach ensures clear, professional documentation while maintaining the authenticity and integrity of the research contributions.
+
 ## Acknowledgments
 
 Special thanks to Keith Briggs for his invaluable contributions and expertise in cellular network simulation. This project builds upon concepts and methodologies developed in the [AIMM Simulator](https://github.com/keithbriggs/AIMM-simulator), which provided inspiration and foundational insights for the CRM framework. The collaboration between academic and industrial perspectives has been essential in creating a tool that serves both research communities effectively.
