@@ -70,7 +70,7 @@ def f_tp_power_energy_score(x,crm_SA, fixed_power_cells_config_dBm=[-np.inf]*12,
     x : array_like
       Power configuration vector for variable power cells (in dBm).
     crm_SA : object
-      CRM system analyzer object containing network configuration and methods
+      CRM Standalone object containing network configuration and methods
       for throughput and power calculations.
     fixed_power_cells_config_dBm : list of float, optional
       Power configuration for fixed power cells in dBm. Default is [-np.inf]*12,
@@ -100,11 +100,6 @@ def f_tp_power_energy_score(x,crm_SA, fixed_power_cells_config_dBm=[-np.inf]*12,
     outer cell power configurations. The energy score represents the system's
     energy efficiency.
     
-    Examples
-    --------
-    >>> x = [20, 25, 30]  # Power for variable cells
-    >>> throughput, power, efficiency = f_tp_power_energy_score(x, crm_analyzer)
-    >>> print(f"Efficiency: {efficiency:.2f} Mbps/Joule")
     """
   fixed_power_cells=fixed_power_cells_config_dBm
   full_x=np.concatenate((x,fixed_power_cells))
@@ -157,14 +152,6 @@ def generate_neighbours(array, valid_values, step):
     - Generated neighbors contain only valid power values or -np.inf
     - No duplicate of the original array is included in neighbors
     - Boundary conditions are properly managed
-    
-    Examples
-    --------
-    >>> import numpy as np
-    >>> array = np.array([10, 13, -np.inf])
-    >>> valid_values = [10, 13, 16, 19]
-    >>> step = 3
-    >>> neighbors = generate_neighbours(array, valid_values, step)
     """
     neighbours = []
     if np.all(array == -np.inf):
@@ -256,17 +243,6 @@ def vanilla_hillclimb(seed=0, n_cells=7, n_ues=30, p_low_dBm=40.0, p_high_dBm=56
   5. Terminates when no neighbor provides improvement (local optimum)
   The objective function combines throughput, power consumption, and energy
   efficiency metrics. A checkpoint file is created to save intermediate results.
-
-  Examples
-  --------
-  >>> results = vanilla_hillclimb(seed=42, n_cells=7, n_ues=20)
-  >>> print(f"Optimization completed in {len(results)} iterations")
-  See Also
-  --------
-  get_scenario : Creates the CRM scenario
-  get_CRM_SA : Gets the CRM simulated annealing object
-  f_tp_power_energy_score : Objective function for power optimization
-  generate_neighbours : Generates neighboring power configurations
   """
   
   checkpoint_file=f"random_vanilla_hillclimb_checkpoint_{n_cells}cells_{n_ues}ues_{p_low_dBm}_{p_high_dBm}_{step_dBm}_seed{seed:03}.csv"
@@ -733,15 +709,6 @@ def simulated_annealing(max_n_iterations=100,
   
   Valid power levels include -np.inf (i.e. cell is powered OFF) plus the range
   [p_low_dBm, p_high_dBm] with step_dBm increments.
-  
-  
-  References
-  ----------
-  .. [1] Kirkpatrick, S., Gelatt Jr, C. D., & Vecchi, M. P. (1983). 
-          Optimization by simulated annealing. Science, 220(4598), 671-680.
-  .. [2] Černý, V. (1985). Thermodynamical approach to the traveling
-          salesman problem: An efficient simulation algorithm.
-          Journal of Optimization Theory and Applications, 45(1), 41-51.
   """
       
   crm=get_scenario(seed=seed, n_cells=n_cells, n_ues=n_ues, bw_MHz=10.0)
