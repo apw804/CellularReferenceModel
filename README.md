@@ -12,64 +12,14 @@ CRM focuses on the essential elements of cellular network modeling - cell and us
 
 ## Key Features
 
-### Research-Oriented Design
-- **Lightweight Framework**: Streamlined implementation focused on core research needs.
-- **Fast Execution**: Optimized for rapid prototyping and iterative algorithm development.
-- **Academic & Industrial Use**: Designed specifically for research environments and requirements.
-- **5G Principles Alignment**: Incorporates relevant 5G concepts without full system complexity.
+### Core Framework
+CRM provides a **lightweight, research-focused simulation environment** that incorporates 5G principles without the computational overhead of full system simulators. The framework is designed for both academic and industrial research environments, enabling fast iteration cycles through **vectorized operations** and optimized performance. This makes it ideal for algorithm development, energy efficiency studies, and rapid prototyping where researchers need quick results without sacrificing technical accuracy.
 
-### Efficient Network Modeling
-- **Hexagonal Cell Grid**: Standard 3GPP-compliant hexagonal cell layout for realistic network topologies.
-- **Flexible UE Distribution**: Configurable user equipment placement using Poisson point process or uniform distribution.
-- **Vectorized Operations**: Optimized computational performance through vectorized calculations for rapid analysis.
-- **Scalable Simulations**: Efficient handling of various network sizes suitable for research scenarios.
+### Network Modeling & 3GPP Compliance
+The simulator features **hexagonal cell grids** with configurable UE distribution using Poisson or uniform placement strategies. CRM implements **3GPP-compliant path loss models** including free-space, RMa (Rural Macrocell), and UMa (Urban Macrocell) scenarios with complete LOS/NLOS propagation modeling. This standards alignment ensures research validity while maintaining the computational efficiency needed for extensive parameter sweeps and multiple experiments.
 
-### Research-Focused 3GPP Compliance
-- **Essential Path Loss Models**: Support for key models including free-space, RMa (Rural Macrocell), UMa (Urban Macrocell).
-- **LOS/NLOS Scenarios**: Line-of-sight and non-line-of-sight propagation modeling for comprehensive analysis.
-- **Standards Alignment**: Implementation follows relevant 3GPP simulation protocols for research validity.
-- **5G-Relevant Parameters**: Incorporates 5G-aligned parameters without full system complexity.
-
-### Research Visualization & Analysis
-- **Quick Visualization**: Fast rendering of UEs, cells, and their attachment relationships for immediate feedback.
-- **Research Metrics**: System performance indicators tailored for academic and industrial research needs.
-- **Rapid Prototyping Support**: Visual tools designed for iterative research and development.
-
-### Energy Efficiency Research Tools
-- **Energy Score Calculation**: Assessment of energy efficiency for each base station-to-UE link.
-- **Research-Grade Metrics**: Analysis based on radiated transmit power suitable for academic publications.
-- **Throughput-to-Power Analysis**: Essential efficiency metrics for energy research applications.
-
-### Algorithm Research Platform
-- **Optimization Testing Ground**: Framework for testing and comparing optimization algorithms.
-- **Research Algorithm Implementation**: Built-in random search, hill climbing, and simulated annealing.
- for benchmarking.
-- **Custom Algorithm Integration**: Easy integration of novel optimization approaches for research.
-- **Benchmarking Capabilities**: Standardized platform for algorithm performance comparison.
-
-## Research Applications
-
-### Academic Research
-- Algorithm development and testing.
-- Energy efficiency studies.
-- Network optimization research.
-- Comparative analysis of optimization techniques.
-- Rapid concept validation.
-
-### Industrial Research
-- Prototype algorithm development.
-- Proof-of-concept demonstrations.
-- Benchmarking studies.
-- Research collaboration with academia.
-- Fast iteration for R&D projects.
-
-## Performance Characteristics
-
-- **Research-Speed Computation**: Vectorized operations optimized for research iteration cycles.
-- **Lightweight Architecture**: Minimal overhead for maximum research productivity.
-- **Fast Simulation Cycles**: Quick turnaround for hypothesis testing and validation.
-- **Memory Efficient**: Optimized for running multiple experiments and parameter sweeps.
-- **Research-Scale Ready**: Designed for typical research scenario sizes and computational resources.
+### Research Applications & Performance
+CRM serves as a comprehensive platform for **optimization algorithm testing and comparison**, including built-in implementations of random search, hill climbing, and simulated annealing with support for custom algorithm integration. The framework excels in network optimization research, energy efficiency analysis, and benchmarking studies. With its memory-efficient design and vectorized computation approach, CRM delivers fast execution suitable for typical research computational resources while enabling scalable simulations across various network sizes.
 
 ## Contributors
 
