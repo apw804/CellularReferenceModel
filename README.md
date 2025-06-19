@@ -24,7 +24,7 @@ CRM serves as a comprehensive platform for **optimization algorithm testing and 
 ## Contributors
 
 This project is a collaboration between:
-- **Kishan Sthankiya** - Queen Mary University of London
+- **[Kishan Sthankiya](https://orcid.org/0009-0002-1935-0476)** - Queen Mary University of London
 - **[Keith Briggs](https://keithbriggs.info/)** - BT
 
 ## Acknowledgments
